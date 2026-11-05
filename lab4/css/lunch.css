@@ -1,0 +1,237 @@
+.page-title {
+    margin: 45px 0;
+    font-size: 42px;
+}
+
+.menu-section {
+    margin-bottom: 65px;
+}
+
+.menu-section > h2,
+.order-section > h2 {
+    margin: 0 0 28px;
+    font-size: 30px;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    background: #fff;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+}
+
+.dish-card:hover,
+.dish-card.selected {
+    border-color: tomato;
+}
+
+.dish-card > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 35px;
+    object-fit: cover;
+}
+
+.dish-card p {
+    margin: 8px 0 0;
+}
+
+.dish-price,
+.dish-name {
+    font-size: 18px;
+}
+
+.dish-price {
+    font-weight: 500;
+}
+
+.dish-name {
+    flex: 1;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.dish-weight {
+    color: #777;
+}
+
+.dish-card button {
+    margin-top: auto;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 10px;
+    background: #f1eee9;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dish-card:hover button,
+.dish-card.selected button {
+    color: #fff;
+    background: tomato;
+}
+
+.order-section {
+    padding: 10px 0 70px;
+}
+
+.order-section > h2 {
+    text-align: center;
+}
+
+.order-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px;
+    max-width: 850px;
+    margin-inline: auto;
+}
+
+.order-form h3 {
+    margin: 0 0 24px;
+    font-size: 20px;
+}
+
+.order-category,
+.order-total {
+    margin-bottom: 22px;
+}
+
+.order-category h4,
+.order-total h4 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.order-category p,
+.order-total p,
+#order-empty {
+    margin: 4px 0 0;
+    font-size: 18px;
+}
+
+.order-total {
+    margin-bottom: 28px;
+}
+
+.order-form label,
+.order-form legend {
+    font-weight: 500;
+}
+
+.order-form select,
+.order-form textarea,
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form input[type="time"] {
+    width: 100%;
+    margin: 4px 0 14px;
+    padding: 10px 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #fff;
+    font: inherit;
+}
+
+.order-form textarea {
+    resize: vertical;
+}
+
+.order-form .checkbox-label {
+    display: block;
+    margin: 4px 0 14px;
+    font-weight: 400;
+}
+
+.order-form input[type="checkbox"],
+.order-form input[type="radio"] {
+    accent-color: tomato;
+}
+
+.form-note {
+    margin: -8px 0 16px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.order-form fieldset {
+    margin: 0 0 18px;
+    padding: 0;
+    border: 0;
+}
+
+.order-form fieldset label {
+    display: block;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 8px 24px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    border-color: tomato;
+    color: tomato;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 800px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dish-card {
+        padding: 26px;
+    }
+
+    .order-form {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title,
+    .menu-section > h2 {
+        text-align: center;
+    }
+
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dish-card {
+        max-width: 390px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .order-form {
+        grid-template-columns: 1fr;
+    }
+}

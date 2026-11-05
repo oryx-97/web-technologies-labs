@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Соберите домашний ланч из супа, главного блюда и свежего сока">
+    <title>Собрать ланч — Тёплый стол</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lunch.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <script src="js/dishes.js" defer></script>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Тёплый стол — на главную">Тёплый стол</a>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <a href="index.html">Главная</a>
+                <a class="active" href="lunch.html" aria-current="page">Собрать ланч</a>
+                <a href="index.html#about">О нас</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main container">
+        <h1 class="page-title">Соберите свой ланч</h1>
+
+        <section class="menu-section">
+            <h2>Выберите суп</h2>
+            <div class="dishes-grid" data-category="soup"></div>
+        </section>
+        <section class="menu-section">
+            <h2>Выберите главное блюдо</h2>
+            <div class="dishes-grid" data-category="main"></div>
+        </section>
+        <section class="menu-section">
+            <h2>Выберите напиток</h2>
+            <div class="dishes-grid" data-category="drink"></div>
+        </section>
+
+        <section class="order-section">
+            <h2>Сделать заказ</h2>
+            <form class="order-form" action="#" method="post">
+                <div class="order-fields">
+                    <h3>Ваш заказ</h3>
+                    <input id="soup-input" name="soup" type="hidden">
+                    <input id="main-input" name="main" type="hidden">
+                    <input id="drink-input" name="drink" type="hidden">
+                    <p id="order-empty">Ничего не выбрано</p>
+                    <div class="order-category" data-order-category="soup" hidden>
+                        <h4>Суп</h4>
+                        <p>Блюдо не выбрано</p>
+                    </div>
+                    <div class="order-category" data-order-category="main" hidden>
+                        <h4>Главное блюдо</h4>
+                        <p>Блюдо не выбрано</p>
+                    </div>
+                    <div class="order-category" data-order-category="drink" hidden>
+                        <h4>Напиток</h4>
+                        <p>Напиток не выбран</p>
+                    </div>
+                    <div class="order-total" id="order-total" hidden>
+                        <h4>Стоимость заказа</h4>
+                        <p><span id="total-price">0</span>₽</p>
+                    </div>
+                    <label for="comment">Комментарии к заказу</label>
+                    <textarea id="comment" name="comment" rows="7"></textarea>
+                </div>
+                <div class="customer-fields">
+                    <h3>Ваши данные</h3>
+                    <label for="name">Имя</label>
+                    <input id="name" name="name" type="text" autocomplete="name">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email">
+                    <label class="checkbox-label" for="news"><input id="news" name="news" type="checkbox" checked> Получать информацию о скидках и акциях</label>
+                    <label for="phone">Номер телефона</label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel">
+                    <label for="address">Адрес доставки</label>
+                    <input id="address" name="address" type="text" autocomplete="address-line1">
+                    <p class="form-note">Доставка осуществляется только по Москве</p>
+                    <fieldset>
+                        <legend>Время доставки:</legend>
+                        <label><input name="delivery-time" type="radio" value="asap"> Как можно скорее</label>
+                        <label><input name="delivery-time" type="radio" value="scheduled"> К указанному времени</label>
+                    </fieldset>
+                    <label for="time">Укажите время доставки</label>
+                    <input id="time" name="time" type="time" min="07:00" max="23:00">
+                    <p class="form-note">Доступное время доставки с 7:00 до 23:00</p>
+                    <div class="form-actions">
+                        <button type="reset">Сбросить</button>
+                        <button type="submit">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <div class="container footer-inner">
+            <p>Тёплый стол · Москва</p>
+            <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
+        </div>
+    </footer>
+</body>
+</html>
