@@ -1,0 +1,77 @@
+* {
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.site-header {
+    padding: 0 0 15px;
+    border-bottom: 2px solid #000;
+}
+
+.main-nav,
+.primary-link,
+.dish-card button,
+.form-actions,
+.site-footer {
+    display: none !important;
+}
+
+.container,
+.hero,
+.about,
+.schedule {
+    width: 100%;
+    max-width: none;
+    padding: 15px 0;
+}
+
+.hero,
+.about-content {
+    gap: 20px;
+}
+
+.hero h1,
+.page-title {
+    font-size: 28px;
+}
+
+.hero-image,
+.about-content img {
+    max-width: 280px;
+}
+
+.menu-section {
+    margin-bottom: 25px;
+    break-inside: avoid;
+}
+
+.dishes-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.dish-card {
+    padding: 10px;
+    border: 1px solid #777;
+    break-inside: avoid;
+}
+
+.dish-card > img {
+    max-height: 150px;
+}
+
+.order-form {
+    gap: 25px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    border-color: #555 !important;
+}
+
+th,
+td {
+    border-color: #000;
+}
