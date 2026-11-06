@@ -1,0 +1,47 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    color: #292524;
+    background: #faf8f5;
+}
+
+.accent-text {
+    color: #d95840;
+}
+
+.btn-accent {
+    color: #fff;
+    background: #d95840;
+    border-color: #d95840;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    color: #fff;
+    background: #bd4430;
+    border-color: #bd4430;
+}
+
+.hero-section {
+    background: #f3e9df;
+}
+
+.cta-block {
+    color: #fff;
+    background: #d95840;
+}
+
+.feature-card {
+    background: #fff;
+}
+
+.contact-form a,
+a {
+    color: #bd4430;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
