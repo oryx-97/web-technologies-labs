@@ -1,0 +1,399 @@
+.page-title {
+    margin: 45px 0;
+    font-size: 42px;
+}
+
+.menu-section {
+    margin-bottom: 65px;
+}
+
+.menu-section > h2,
+.order-section > h2 {
+    margin: 0 0 28px;
+    font-size: 30px;
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    background: #fff;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+}
+
+.dish-card:hover,
+.dish-card.selected {
+    border-color: tomato;
+}
+
+.dish-card > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 35px;
+    object-fit: cover;
+}
+
+.dish-card p {
+    margin: 8px 0 0;
+}
+
+.dish-price,
+.dish-name {
+    font-size: 18px;
+}
+
+.dish-price {
+    font-weight: 500;
+}
+
+.dish-name {
+    flex: 1;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.dish-weight {
+    color: #777;
+}
+
+.dish-card button {
+    margin-top: auto;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 10px;
+    background: #f1eee9;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dish-card:hover button,
+.dish-card.selected button {
+    color: #fff;
+    background: tomato;
+}
+
+.order-section {
+    padding: 10px 0 70px;
+}
+
+.order-section > h2 {
+    text-align: center;
+}
+
+.order-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px;
+    max-width: 850px;
+    margin-inline: auto;
+}
+
+.order-form h3 {
+    margin: 0 0 24px;
+    font-size: 20px;
+}
+
+.order-category,
+.order-total {
+    margin-bottom: 22px;
+}
+
+.order-category h4,
+.order-total h4 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.order-category p,
+.order-total p,
+#order-empty {
+    margin: 4px 0 0;
+    font-size: 18px;
+}
+
+.order-total {
+    margin-bottom: 28px;
+}
+
+.order-form label,
+.order-form legend {
+    font-weight: 500;
+}
+
+.order-form select,
+.order-form textarea,
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form input[type="time"] {
+    width: 100%;
+    margin: 4px 0 14px;
+    padding: 10px 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: #fff;
+    font: inherit;
+}
+
+.order-form textarea {
+    resize: vertical;
+}
+
+.order-form .checkbox-label {
+    display: block;
+    margin: 4px 0 14px;
+    font-weight: 400;
+}
+
+.order-form input[type="checkbox"],
+.order-form input[type="radio"] {
+    accent-color: tomato;
+}
+
+.form-note {
+    margin: -8px 0 16px;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.order-form fieldset {
+    margin: 0 0 18px;
+    padding: 0;
+    border: 0;
+}
+
+.order-form fieldset label {
+    display: block;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 8px 24px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.form-actions button:hover {
+    border-color: tomato;
+    color: tomato;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 800px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dish-card {
+        padding: 26px;
+    }
+
+    .order-form {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-title,
+    .menu-section > h2 {
+        text-align: center;
+    }
+
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dish-card {
+        max-width: 390px;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .order-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: -8px 0 24px;
+}
+
+.filters button {
+    padding: 8px 18px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #444;
+    background: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.filters button:hover,
+.filters button.active {
+    border-color: tomato;
+    color: #fff;
+    background: tomato;
+}
+
+@media (max-width: 600px) {
+    .filters {
+        justify-content: center;
+    }
+}
+
+.combos-section {
+    margin-bottom: 65px;
+}
+
+.combos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.combo-card {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+}
+
+.combo-card h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.combo-dishes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.combo-dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85px;
+    text-align: center;
+}
+
+.combo-dish img {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.combo-dish img:hover {
+    transform: translateY(-5px) scale(1.08);
+}
+
+.dessert-note {
+    font-size: 14px;
+    text-align: center;
+}
+
+.notification-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.notification {
+    max-width: 420px;
+    padding: 30px;
+    border-radius: 15px;
+    background: #fff;
+    text-align: center;
+}
+
+.notification button {
+    padding: 8px 25px;
+    border: 1px solid tomato;
+    border-radius: 8px;
+    color: tomato;
+    background: #fff;
+    cursor: pointer;
+}
+
+.notification button:hover {
+    color: #fff;
+    background: tomato;
+}
+
+@media (max-width: 800px) {
+    .combos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .combos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkout-panel {
+    position: sticky;
+    bottom: 15px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 650px;
+    margin: 0 auto 40px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+}
+
+.checkout-panel .primary-link {
+    margin: 0;
+}
+
+.checkout-panel .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.selected-section {
+    margin-bottom: 50px;
+}
+
+#checkout-empty {
+    padding: 20px;
+    background: #f1eee9;
+}
